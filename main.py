@@ -20,6 +20,7 @@ def main():
     modelgen.set_financials(mycompany.get_financials())
 
     model = modelgen.build_linear_regression_model('Price')
+    print(model)
     years = [i for i in range(2021, 2026)]
     fin = mycompany.get_financials()
     fin = fin.drop(["Price"], axis=1)
